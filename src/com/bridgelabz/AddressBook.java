@@ -37,7 +37,7 @@ public class AddressBook {
 					System.out.println(" Address book is empty ");
 					break;
 				}
-				addressBook.editCantact();
+				addressBook.editContact();
 				break;
 
 			case 3:
@@ -102,7 +102,7 @@ public class AddressBook {
 				addressBook.addCantact();
 
 			} else {
-				System.out.println(" There is no contact. ");
+				System.out.println(" There is no contact ");
 			}
 		}
 	}
