@@ -52,7 +52,7 @@ public class AddressBook {
 						addressBook.addCantact();
 
 					} else {
-						System.out.println(" There is no cantact ");
+						System.out.println(" There is no cantact.. ");
 					}
 				}
 			}
