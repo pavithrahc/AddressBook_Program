@@ -31,15 +31,15 @@ public class AddressBookSystem {
 					System.out.println(" Address book is empty ");
 					break;
 				}
-				addressBook.editContact();
+				addressBook.editCantact();
 				break;
 
 			case 3:
 				if (addressBook.cantactList.isEmpty()) {
-					System.out.println(" Address book is empty ");
+					System.out.println(" Address book is empty .");
 					break;
 				}
-				addressBook.deleteContact();
+				addressBook.deleteCantact();
 
 			case 4:
 				exit = 0;
