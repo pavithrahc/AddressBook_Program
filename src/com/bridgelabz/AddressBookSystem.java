@@ -28,7 +28,7 @@ public class AddressBookSystem {
 
 			case 2:
 				if (addressBook.cantactList.isEmpty()) {
-					System.out.println(" Address book is empty ");
+					System.out.println(" Address book is empty.. ");
 					break;
 				}
 				addressBook.editContact();

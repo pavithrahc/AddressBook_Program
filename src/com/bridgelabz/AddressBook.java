@@ -40,7 +40,7 @@ public class AddressBook {
 	// method for editing existing contact
 			public void editContact() {
 				Scanner sc = new Scanner(System.in);
-				System.out.println(" Enter the first name ");
+				System.out.println(" Enter the first name. ");
 				String fName = sc.nextLine();
 
 				for (int index = 0; index < cantactList.size(); index++) {
