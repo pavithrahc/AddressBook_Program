@@ -38,22 +38,37 @@ public class AddressBook {
 	}
 
 	// method for editing existing contact
-			public void editContact() {
-				Scanner sc = new Scanner(System.in);
-				System.out.println(" Enter the first name. ");
-				String fName = sc.nextLine();
+		public void editContact() {
+			Scanner sc = new Scanner(System.in);
+			System.out.println(" Enter the first name ");
+			String fName = sc.nextLine();
 
-				for (int index = 0; index < cantactList.size(); index++) {
+			for (int index = 0; index < cantactList.size(); index++) {
 
-					if (cantactList.get(index).getFirstName().equals(fName)) {
-						cantactList.remove(index);
+				if (cantactList.get(index).getFirstName().equals(fName)) {
+					cantactList.remove(index);
 
-						AddressBook addressBook = new AddressBook();
-						addressBook.addCantact();
+					AddressBook addressBook = new AddressBook();
+					addressBook.addCantact();
 
-					} else {
-						System.out.println(" There is no cantact.. ");
-					}
+				} else {
+					System.out.println(" There is no contact ");
 				}
 			}
+		}
+
+		public void deleteContact() {
+			Scanner deleteNameInput = new Scanner(System.in);
+			System.out.println(" Enter the first name ");
+			String deleteFirstName = deleteNameInput.nextLine();
+
+			for (int increment = 0; increment < cantactList.size(); increment++) {
+				if (cantactList.get(increment).getFirstName().equals(deleteFirstName)) {
+					cantactList.remove(increment);
+				} else {
+					System.out.println(" Name does not exist...");
+				}
+			}
+		}
+
 	}
