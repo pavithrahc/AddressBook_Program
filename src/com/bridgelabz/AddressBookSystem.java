@@ -18,8 +18,11 @@ public class AddressBookSystem {
 		Scanner sc = new Scanner(System.in);
 		int exit = 1;
 		while (exit == 1) {
+
 			System.out.println(" Welcome to address book program ");
 			System.out.println(" Select a choice : 1. Add 2.Edit 3.Delete  4. Exit");
+			System.out.print(":==");
+
 			int choice = sc.nextInt();
 			switch (choice) {
 			case 1:
@@ -36,7 +39,7 @@ public class AddressBookSystem {
 
 			case 3:
 				if (addressBook.cantactList.isEmpty()) {
-					System.out.println(" Address book is empty .");
+					System.out.println(" Address book is empty. ");
 					break;
 				}
 				addressBook.deleteCantact();
