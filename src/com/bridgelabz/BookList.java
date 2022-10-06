@@ -3,7 +3,10 @@
  */
 package com.bridgelabz;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
+
 /**
  * @author PAVITHRA C
  *
@@ -40,6 +43,32 @@ public class BookList {
 		value.email = scan.nextLine();
 		System.out.println("Enter zip : ");
 		value.zip = scan.nextLine();
+	}
+
+	void showPersonsByCity(String placeName) {
+		if (books.size() == 0) {
+			System.out.println("Booklist is empty");
+			return;
+		}
+		for (int i = 0; i < books.size(); i++) {
+			List<Contacts> matchedContact = books.get(i).list.stream().filter(x -> x.city.equals(placeName))
+					.collect(Collectors.toList());
+			matchedContact.stream().forEach(x -> System.out.println(x.firstName));
+
+		}
+	}
+
+	void showPersonsByState(String placeName) {
+		if (books.size() == 0) {
+			System.out.println("Booklist is empty");
+			return;
+		}
+		for (int i = 0; i < books.size(); i++) {
+			List<Contacts> matchedContact = books.get(i).list.stream().filter(x -> x.state.equals(placeName))
+					.collect(Collectors.toList());
+			matchedContact.stream().forEach(x -> System.out.println(x.firstName));
+
+		}
 	}
 
 	void operations(ArrayList<AddressBook> books, int i) {
@@ -141,5 +170,4 @@ public class BookList {
 		}
 		return result;
 	}
-
 }
